@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: lightblue;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 10%;
+
+li{
+    transition: 0.4s;
+
+}
+
+li:hover{
+    transition: 0.4s;
+    transform: scale(1.1,1.1);
+}
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    border-radius: 50px;
+    background-color: lightblue;
+    padding: 8px 32px;
+    cursor: pointer;
+}
+
+li::marker{
+    color: white;
+}

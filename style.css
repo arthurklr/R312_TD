@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: lightblue;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-right: auto;
+    margin-left: 0;
+    gap: 10%;
+    margin-top: 10%;
+    grid-template-areas:
+        "td1 td2 td3"
+        "td4 td5 td6"
+        ". td7 .";
+}
+
+/* Utilisation des classes directement pour définir les grid-area */
+.td1 { grid-area: td1; }
+.td2 { grid-area: td2; }
+.td3 { grid-area: td3; }
+.td4 { grid-area: td4; }
+.td5 { grid-area: td5; }
+.td6 { grid-area: td6; }
+.td7 { grid-area: td7; }
+
+li {
+    list-style: none; /* Supprime les marqueurs par défaut */
+    transition: transform 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    border: none; /* Supprime les bordures par défaut */
+    border-radius: 50px;
+    background-color: lightblue;
+    cursor: pointer;
+    padding: 2% 120%; /* Ajuste les marges pour plus de cohérence */
+}
+
+li::marker {
+    color: transparent; /* Cache les marqueurs */
+}
