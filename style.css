@@ -1,63 +1,68 @@
+/* Global Styles */
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
-    background-color: lightblue;
-    min-height: 10vh;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
+/* Header Styles */
+header {
+    background-color: #4a90e2;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 2em;
+}
+
+/* Navigation List */
 ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-right: auto;
-    margin-left: 0;
-    gap: 10%;
-    margin-top: 10%;
-    grid-template-areas:
-        "td1 td2 td3"
-        "td4 td5 td6"
-        ". td7 .";
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
 }
-
-/* Utilisation des classes directement pour définir les grid-area */
-.td1 { grid-area: td1; }
-.td2 { grid-area: td2; }
-.td3 { grid-area: td3; }
-.td4 { grid-area: td4; }
-.td5 { grid-area: td5; }
-.td6 { grid-area: td6; }
-.td7 { grid-area: td7; }
 
 li {
-    list-style: none; /* Supprime les marqueurs par défaut */
-    transition: transform 0.4s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 10px;
 }
 
-li:hover {
-    transform: scale(1.1);
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-button {
-    border: none; /* Supprime les bordures par défaut */
-    border-radius: 50px;
-    background-color: lightblue;
+.td button {
+    background-color: #4a90e2;
+    border: none;
+    padding: 15px 25px;
     cursor: pointer;
-    padding: 2% 120%; /* Ajuste les marges pour plus de cohérence */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-li::marker {
-    color: transparent; /* Cache les marqueurs */
+.td button:hover {
+    background-color: #186bc9;
+    transform: scale(1.05);
+}
+
+.td button h3 {
+    margin: 0;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .td1 button {
+        padding: 10px 15px;
+    }
 }
