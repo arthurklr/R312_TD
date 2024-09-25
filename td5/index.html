@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .barre {
+            background-color: aqua;
+            height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        let tableau = [
+            0.1,
+            0.16,
+            0.256,
+            0.4096,
+            0.6553,
+            1.0485,
+            1.6777,
+            2.6843,
+            4.2949,
+            6.8719,
+            10.9951
+        ]
+
+
+        console.log(tableau[0])
+        console.log(tableau[1])
+        console.log(tableau.length)
+        console.log(tableau[tableau.length - 1])
+
+        tableau.forEach(e => {
+            document.body.innerHTML += "<div>" + e + "</div>"
+        })
+
+        for (let i = 0, t = tableau.length; i < t; i++) {
+            document.body.innerHTML += "<div>La valeur " + i + " du tableau est " + tableau[i] + "</div>"
+        }
+
+        for (let i = 0, t = tableau.length; i < t; i++) {
+            document.body.innerHTML += "<div class='barre' style='width:" + tableau[i] * 10 + "vh'></div>";
+        }
+    </script>
+</body>
+
+</html>
