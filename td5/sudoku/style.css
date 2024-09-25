@@ -1,0 +1,41 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 40px) 10px repeat(3, 40px) 10px repeat(3, 40px);
+    grid-template-rows: repeat(3, 40px) 10px repeat(3, 40px) 10px repeat(3, 40px);
+    gap: 7px;
+}
+
+input {
+    height: 40px;
+    background-color: lightblue;
+    text-align: center;
+}
+
+.couleur {
+    background-color: orange;
+}
+
+.trait1 {
+    grid-row: 1 / 12;
+    grid-column: 4 / 5;
+}
+.trait2 {
+    grid-row: 1 / 12;
+    grid-column: 8 / 9;
+}
+
+.trait3 {
+    grid-row: 4 / 5;
+    grid-column: 1 / 12;
+}
+.trait4 {
+    grid-row: 8 / 9;
+    grid-column: 1 / 12;
+}
