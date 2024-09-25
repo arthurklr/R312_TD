@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <div class="un"></div>
+    <div class="deux"></div>
+    <div class="date"></div>
+    <div class="total"></div>
+    <div class="ascenseur"></div>
+    <table></table>
+    <script>
+        let filles = ["Laurine", "Anita", "Gwladys"];
+        let garcons = ["Paul", "André", "Jojo la praline"];
+
+        let humains = filles.concat(garcons)
+        console.log(humains)
+        let text = humains.join(", ")
+        let div = document.querySelector('div').innerHTML += "Les participants sont : " + text
+
+        let humains1 = filles.concat(garcons)
+        console.log(humains)
+        let text1 = humains.sort().join(", ")
+        let div1 = document.querySelector('.un').innerHTML += "Les participants sont : " + text1
+
+
+        let mail = "sebastien.lehmann@uha.fr";
+        let divise = mail.split("@")[0].split(".").join(" ")
+        let div2 = document.querySelector('.deux').innerHTML += divise
+
+        let dateISO = "2022-12-24";
+        let date = dateISO.split("-").reverse().join("/")
+        let divDate = document.querySelector('.date').innerHTML += date;
+
+
+
+        let poids = [42, 100, 33, 72, 56, 164, 13, 66];
+
+        function somme(total, num) {
+            return total + num;
+        }
+        let t = poids.reduce(somme)
+        let message = ""
+        if (t > 500) {
+            message += "C'est mort"
+        } else {
+            message += "Ca passe"
+        }
+        document.querySelector('.total').innerHTML = message
+
+
+
+        let m = poids.reduce(somme) / poids.length;
+        console.log(m)
+
+
+        let croissant = poids.sort(function (a, b) { return a - b })
+        console.log(croissant)
+
+
+        let tableau = document.querySelector('table')
+        let liste = [
+            { nom: "kientzler", prenom: "arthur" },
+            { nom: "bud", prenom: "henry" },
+            { nom: "da-ros", prenom: "alain" },
+        ]
+        console.log(liste)
+        tableau.innerHTML += "<br><th>Nom</th><th>Prénom</th>"
+        liste.forEach(i=>{
+            tableau.innerHTML += "<tr><td>"+i.nom+"</td><td>"+i.prenom+"</td></tr>"
+        })
+
+        tableau.addEventListener('click', recuperer)
+        function recuperer(){
+            liste.forEach(i=>{
+                let prenom = i.prenom
+                prenom.sort(function (a, b) { return a - b })
+                console.log(prenom)
+            })
+        }
+
+    </script>
+</body>
+
+</html>
