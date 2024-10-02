@@ -23,9 +23,9 @@
 		</a>
 
 		<nav>
-			<a href="#">Logo</a>
-			<a href="#">Design</a>
-			<a href="#">Communication</a>
+			<a href="logo">Logo</a>
+			<a href="design">Design</a>
+			<a href="communication">Communication</a>
 			<a href="#">Web</a>
 			<a href="#">Tarifs</a>
 		</nav>
@@ -200,7 +200,7 @@
 		document.querySelector('h1>span').addEventListener('click', message)
 		function message(event) {
 			console.log('Méthode de con');
-			event.stopPropagation()
+			event.stopPropagation();
 		}
 
 		document.querySelector('h1').addEventListener("click", genie);
@@ -215,11 +215,13 @@
 		function touche(event) {
 			console.log(event);
 		}
+
 		window.addEventListener("click", coord)
 		function coord(event) {
 			let x = event.offsetX;
 			console.log(x);
 		};
+
 		window.addEventListener("click", coord)
 		function coord(event) {
 			let x = event.offsetX || event.changedTouches[0].pageX;
@@ -230,6 +232,25 @@
 		function stop(event) {
 			event.preventDefault();
 		}
+
+		document.querySelectorAll('header>nav>a').forEach(lien =>{
+			lien.addEventListener('click', click)
+			function click(){
+				console.log(lien.href)
+				event.preventDefault()
+			}
+		})
+
+		document.addEventListener('click', supprimer);
+
+		function supprimer(event) {
+			let element = event.target;
+			element.remove()
+		}
+
+
+
+
 	</script>
 </body>
 
