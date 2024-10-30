@@ -1,4 +1,4 @@
-let data = {
+/*let data = {
     "2024-09-25": [
         {
             "type": "absences",
@@ -4630,7 +4630,7 @@ let data = {
         }
     ],
     "1986-10-24": []
-}
+}*/
 
 
 let divConnexion = document.querySelector('.connexion');
